@@ -57,9 +57,9 @@ ForEach ($protectionGroup in $SrmObject.SRMService.ListProtectionGroups($SrmObje
     Write-Host "Fetching VMs for ProtectionGroup"
     $protectedVms = $SrmObject.SRMService.listProtectedVms($protectionGroup) 
     $customProtectionGroupInfo = New-Object System.Object
-    $customProtectionGroupInfo | Add-Member -Name ProtectionGroupMoRef -Value $protectionGroup -MemberType NoteProperty # -PassThru
-    $customProtectionGroupInfo | Add-Member -Name ProtectionGroupInfo -Value $protectionGroupInfo -MemberType NoteProperty # -PassThru
-    $customProtectionGroupInfo | Add-Member -Name ProtectedVms -Value $protectedVms -MemberType NoteProperty # -PassThru
+    $customProtectionGroupInfo | Add-Member -Name ProtectionGroupMoRef -Value $protectionGroup -MemberType NoteProperty
+    $customProtectionGroupInfo | Add-Member -Name ProtectionGroupInfo -Value $protectionGroupInfo -MemberType NoteProperty
+    $customProtectionGroupInfo | Add-Member -Name ProtectedVms -Value $protectedVms -MemberType NoteProperty
 
     $protectionGroupList += $customProtectionGroupInfo
 }
