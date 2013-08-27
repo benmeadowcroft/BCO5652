@@ -1,4 +1,6 @@
 BCO5652
 =======
 
-Scripts for BCO5652 presentation
+Example scripts for BCO5652 presentation
+
+These are providided for illustrative purposes only
